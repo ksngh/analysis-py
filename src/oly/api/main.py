@@ -7,10 +7,9 @@ import traceback
 from fastapi import FastAPI
 from pydantic import BaseModel
 from curl_cffi import requests
-
-from database import SessionLocal, engine
-from models import Base, RankingItem
-from parser import parse_oliveyoung_best_html
+from oly.storage.db.database import SessionLocal, engine
+from oly.storage.models.models import Base, RankingItem
+from oly.ingestion.parsers.parser import parse_oliveyoung_best_html
 
 RANKING_URL = "https://www.oliveyoung.co.kr/store/main/getBestList.do"
 _stop_event = threading.Event()

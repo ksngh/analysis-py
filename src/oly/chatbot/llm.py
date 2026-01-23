@@ -16,7 +16,7 @@ from langchain_qdrant import QdrantVectorStore
 from langchain_text_splitters import RecursiveCharacterTextSplitter
 from qdrant_client import QdrantClient
 
-from config import answer_examples
+from oly.config.config import answer_examples
 
 store = {}
 _collection_checked = False
